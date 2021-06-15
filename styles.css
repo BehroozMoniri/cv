@@ -1,11 +1,24 @@
 
 body { background-color: #E4F5E5; }
-
+head { border padding: 10px;
+      margin:10px;
+      font-size: 30px;
+      }
 hr {
    border-style: dotted none none;
    border-width: 3px;
    border-color: grey;
    height: : 0px;
    width: 50%;    }
-h1 { color: #66BFBF}
-h2 { color: #66BFBF}
+h1 { color: #66BFBF;}
+h2 { color: #66BFBF;}
+
+ul, li {margin-left: 15px; padding-left: 15px;}
+/*
+img {  background-color: #E4F5E5; }
+*/
+.personal {background-color: #E4F5E5; }
+.external {background-color: #A6DFDE; }
+.circular { border-radius: 100%;}
+/* This is for id */
+#heading { color: #93B5E1 ;}
