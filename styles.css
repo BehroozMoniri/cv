@@ -17,6 +17,9 @@ ul, li {margin-left: 15px; padding-left: 15px;}
 img:hover {
   background-color: #93B5E1
 }
+p {
+  padding-left: 50px;
+}
 /*
 img {  background-color: #E4F5E5; }
 */
@@ -25,4 +28,5 @@ img {  background-color: #E4F5E5; }
 .circular { border-radius: 100%;}
 /* This is for id */
 #heading { color: #93B5E1 ;}
-#bigfont {font-size: 50px;}
+#bigfont {font-size: 50px;
+          padding-left: 110px;}
