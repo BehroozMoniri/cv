@@ -15,8 +15,10 @@ h1 { color: #66BFBF;}
 h2 { color: #66BFBF;}
 
 ul, li {margin-left: 15px; 
-  padding-left: 15px;
-  list-style-type: ">";}
+        padding-left: 15px;
+        list-style-type: ">";
+        line-height: 1.2em; 
+        margin-bottom: 10px;}
 img:hover {
   background-color: #93B5E1
 }
@@ -34,8 +36,8 @@ img {  background-color: #E4F5E5; }
 #bigfont {font-size: 50px;
           text-align: center;
           }
-#child {
+/* #child {
   width: 1600;
-}
+} */
 
   /* padding-left: 110px; */
