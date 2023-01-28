@@ -1,5 +1,6 @@
 
-body { background-color: #E4F5E5; }
+body { background-color: #E4F5E5;
+      }
 head { border padding: 10px;
       margin:10px;
       font-size: 30px;
@@ -13,7 +14,9 @@ hr {
 h1 { color: #66BFBF;}
 h2 { color: #66BFBF;}
 
-ul, li {margin-left: 15px; padding-left: 15px;}
+ul, li {margin-left: 15px; 
+  padding-left: 15px;
+  list-style-type: ">";}
 img:hover {
   background-color: #93B5E1
 }
@@ -29,4 +32,10 @@ img {  background-color: #E4F5E5; }
 /* This is for id */
 #heading { color: #93B5E1 ;}
 #bigfont {font-size: 50px;
-          padding-left: 110px;}
+          text-align: center;
+          }
+#child {
+  width: 800;
+}
+
+  /* padding-left: 110px; */
