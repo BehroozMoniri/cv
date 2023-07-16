@@ -1,6 +1,7 @@
 
 body { background-color: #E4F5E5;
       font-size: 20px;
+       font-family: "Times New Roman", Times, serif;
       }
 head { border padding: 10px;
       margin:10px;
@@ -12,7 +13,7 @@ hr {
    border-color: grey;
    height: : 0px;
    width: 50%;    }
-h1 { color: #66BFBF;}
+h1 { color: #666dbf;}
 h2 { color: #66BFBF;}
 
 ul, li {margin-left: 15px; 
@@ -26,9 +27,7 @@ img:hover {
 p {
   padding-left: 50px;
 }
-/*
-img {  background-color: #E4F5E5; }
-*/
+
 .personal {background-color: #E4F5E5; }
 .external {background-color: #A6DFDE; }
 .circular { border-radius: 100%;}
@@ -41,4 +40,7 @@ img {  background-color: #E4F5E5; }
   width: 1600;
 } */
 
-  /* padding-left: 110px; */
+img {
+  height:auto;
+  width: auto;
+} 
