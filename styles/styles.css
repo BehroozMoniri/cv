@@ -41,9 +41,7 @@ ol > li {
   margin-left: 30px; 
   padding-top: 10px;
 }
-/* img:hover {
-  background-color: #93B5E1
-} */
+ 
 p {
   padding: 50px;
 }
@@ -63,9 +61,10 @@ div > #child {
   width: 800;
 }
 img {
+   padding-left: 25px;
   height:auto;
   width: auto;
-padding-left: 25px;
+
 } 
 /* 
 .row {
