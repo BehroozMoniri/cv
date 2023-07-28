@@ -65,6 +65,7 @@ div > #child {
 img {
   height:auto;
   width: auto;
+padding-left: 25px;
 } 
 /* 
 .row {
