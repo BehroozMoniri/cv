@@ -9,7 +9,6 @@ body { background-color: #E4F5E5;
   margin-bottom: 30px;
 }
 * {
-  
    justify-content: "center";
 }
 .container {
@@ -45,9 +44,19 @@ ol > li {
 p {
   padding: 50px;
 }
-/*
-img {  background-color: #E4F5E5; }
-*/
+.education {
+  font-weight: bold;
+}
+img {
+  padding-left: 25px;
+  filter: drop-shadow(10px 2px 4px #44ddbc);
+  height:auto;
+  width: auto;
+} 
+img:hover {  
+   filter:drop-shadow(10px 2px 4px #44dbdd); 
+}
+ 
 .personal {background-color: #E4F5E5; }
 .external {background-color: #A6DFDE; }
 .circular { border-radius: 100%;}
