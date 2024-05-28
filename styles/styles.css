@@ -51,8 +51,8 @@ ol > li {
   font-weight: bold;
 }
 img {
-  /* padding-left: 25px; */
-  filter: drop-shadow(10px 2px 4px #44ddbc);
+  /* padding-left: 25px; 
+  filter: drop-shadow(10px 2px 4px #44ddbc); */
   height:auto;
   width: auto;
 } 
