@@ -1,5 +1,7 @@
 
-body { background-color: #E4F5E5;
+body {  /* background-color: #E4F5E5; */
+      background: rgb(36,35,0);
+background: linear-gradient(90deg, rgba(36,35,0,1) 0%, rgba(0,251,34,1) 0%, rgba(0,212,255,1) 76%);
    font-size: 15px;
    font-family: "Times New Roman", Times, serif;
       }
@@ -8,6 +10,7 @@ body { background-color: #E4F5E5;
   font-size: 6rem;
   margin-bottom: 30px;
 }
+
 * {
    justify-content: "center";
 }
