@@ -62,7 +62,7 @@ img:hover {
  
 .personal {background-color: #E4F5E5; }
 .external {background-color: #A6DFDE; }
-.circular { border-radius: 100%;}
+.circular { border-radius: 80%;}
  
 #heading { color: #93B5E1 ;}
 #bigfont {font-family: 'Rock Salt',cursive;
