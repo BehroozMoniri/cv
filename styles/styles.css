@@ -15,12 +15,7 @@ background: linear-gradient(90deg, rgba(36,35,0,1) 0%, rgba(0,251,34,1) 0%, rgba
 
 * { justify-content: "center";
 }
-.img-container {
-      border: none;
-}
-.summary {
-      border: none;
-}
+
 .container {
   text-align: center;
   justify-content: "center";
@@ -169,4 +164,9 @@ div > #child {
       width: 100%;
     }
   }
-   */
+.img-container {
+      border: none;
+}
+.summary {
+      border: none;
+}
