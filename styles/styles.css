@@ -154,28 +154,36 @@ hr, tr {
     padding: 10px !important;
   }
 
-  /* TABLES - keep as tables but make them scrollable */
-  table {
+  /* === FIXED EDUCATION TABLE === */
+  .education {
     width: 100% !important;
     max-width: 100% !important;
-    display: table !important;
     border-collapse: collapse;
     font-size: 13px;
   }
 
-  .education td,
-  table[width="600"] td,
-  #programming td {
-    padding: 8px 6px;
+  .education td {
+    padding: 10px 8px;
     border-bottom: 1px solid #ddd;
     word-break: break-word;
-    display: table-cell !important;
   }
 
-  .education tr,
-  table[width="600"] tr,
-  #programming tr {
-    display: table-row !important;
+  /* Give proper widths to education table columns */
+  .education td:first-child {
+    width: 80px !important;
+    min-width: 80px !important;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .education td:nth-child(2) {
+    width: auto !important;
+    min-width: 120px !important;
+  }
+
+  .education td:nth-child(3) {
+    width: auto !important;
+    min-width: 100px !important;
   }
 
   .education thead {
@@ -183,14 +191,62 @@ hr, tr {
     background-color: #f5f5f5;
   }
 
-  /* Make tables horizontally scrollable */
-  .table-wrapper,
-  .education,
-  table[width="600"],
+  .education thead td {
+    font-weight: bold;
+    padding: 12px 8px;
+  }
+
+  .education tr {
+    display: table-row !important;
+  }
+
+  /* === WORK HISTORY TABLE - keep as table with scroll === */
+  table[width="600"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: table !important;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  table[width="600"] td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+    display: table-cell !important;
+  }
+
+  table[width="600"] tr {
+    display: table-row !important;
+  }
+
+  /* === PROGRAMMING SKILLS TABLE === */
   #programming {
-    display: block !important;
-    overflow-x: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: table !important;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  #programming td {
+    padding: 8px 6px;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+    display: table-cell !important;
+  }
+
+  #programming tr {
+    display: table-row !important;
+  }
+
+  /* Make tables horizontally scrollable */
+  .table-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin: 10px 0;
   }
 
   /* Headings */
@@ -262,7 +318,18 @@ hr, tr {
     font-size: 17px !important;
   }
 
-  td {
+  .education td {
+    font-size: 12px !important;
+    padding: 8px 4px !important;
+  }
+
+  .education td:first-child {
+    width: 60px !important;
+    min-width: 60px !important;
+  }
+
+  table[width="600"] td,
+  #programming td {
     font-size: 12px !important;
     padding: 6px 4px !important;
   }
