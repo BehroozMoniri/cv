@@ -170,3 +170,239 @@ div > #child {
 .summary {
       border: none;
 }
+
+@media screen and (max-width: 768px) {
+  
+  /* Fix gradient background for mobile */
+  body {
+    background: linear-gradient(135deg, rgba(36,35,0,1) 0%, rgba(0,251,34,1) 50%, rgba(0,212,255,1) 100%);
+    background-attachment: fixed;
+    font-size: 14px;
+  }
+  
+  /* Make heading responsive */
+  #bigfont {
+    font-size: 28px !important;
+    word-wrap: break-word;
+  }
+  
+  /* Center and resize profile image */
+  .img-container {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .personal {
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  /* Make summary text readable */
+  .summary {
+    padding: 10px 15px !important;
+  }
+  
+  #top {
+    padding: 15px !important;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* Fix table layout */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block;
+    overflow-x: auto;
+    white-space: normal;
+  }
+  
+  .education {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .education td {
+    display: block;
+    width: 100% !important;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .education thead {
+    display: none;
+  }
+  
+  .education tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Fix other tables */
+  table[width="600"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  table[width="600"] td {
+    display: block;
+    width: 100% !important;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  table[width="600"] tr {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  /* Make list items responsive */
+  ul > li {
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Responsive table for programming skills */
+  #programming {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  #programming td {
+    display: block;
+    width: 100% !important;
+    padding: 8px 10px;
+  }
+  
+  #programming tr {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  /* Make headings smaller */
+  h1 {
+    font-size: 24px !important;
+  }
+  
+  h2 {
+    font-size: 20px !important;
+  }
+  
+  h3 {
+    font-size: 16px !important;
+  }
+  
+  /* Make container full width */
+  .container {
+    padding: 10px;
+    width: 100%;
+  }
+  
+  /* Fix any iframes/videos */
+  iframe {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+  
+  /* Fix horizontal rule */
+  hr {
+    width: 90% !important;
+  }
+  
+  /* Make links more tappable */
+  a {
+    display: inline-block;
+    padding: 5px 0;
+    word-break: break-word;
+  }
+  
+  /* Fix spacing */
+  .row {
+    margin: 0;
+    padding: 5px;
+  }
+  
+  [class*="col-"] {
+    padding: 5px !important;
+    float: none !important;
+    width: 100% !important;
+    border: none !important;
+  }
+  
+  /* Fix contact section */
+  div[align="center"] h1,
+  div[align="center"] p {
+    word-break: break-word;
+  }
+}
+
+/* Small phones (under 480px) */
+@media screen and (max-width: 480px) {
+  #bigfont {
+    font-size: 22px !important;
+  }
+  
+  body {
+    font-size: 13px;
+  }
+  
+  .personal {
+    max-width: 70%;
+  }
+  
+  #top {
+    font-size: 13px;
+    padding: 10px !important;
+  }
+  
+  h1 {
+    font-size: 20px !important;
+  }
+  
+  h2 {
+    font-size: 18px !important;
+  }
+  
+  ul > li {
+    font-size: 13px;
+  }
+  
+  /* Make any table cells more readable */
+  td {
+    font-size: 13px;
+  }
+}
+
+/* Fix for tablet (768px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  table {
+    max-width: 100% !important;
+    overflow-x: auto;
+    display: block;
+  }
+  
+  .personal {
+    max-width: 60%;
+    height: auto;
+  }
+  
+  #bigfont {
+    font-size: 40px !important;
+  }
+}
