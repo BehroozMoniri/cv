@@ -3,6 +3,7 @@ body {
   background: linear-gradient(90deg, rgba(36,35,0,1) 0%, rgba(0,251,34,1) 0%, rgba(0,212,255,1) 76%);
   font-size: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 100vh; /* Ensures gradient covers full height */
 }
 
 .container {
@@ -108,10 +109,16 @@ hr, tr {
 
 /* === MOBILE RESPONSIVE === */
 @media screen and (max-width: 768px) {
-  /* Background */
+  /* Fix gradient background for mobile - FULL COVERAGE */
+  html, body {
+    min-height: 100vh;
+    height: auto;
+  }
+  
   body {
     background: linear-gradient(135deg, rgba(36,35,0,1) 0%, rgba(0,251,34,1) 50%, rgba(0,212,255,1) 100%);
     background-attachment: fixed;
+    background-size: cover;
     font-size: 14px;
   }
 
@@ -154,7 +161,7 @@ hr, tr {
     padding: 10px !important;
   }
 
-  /* === EDUCATION TABLE - Convert to cards === */
+  /* === EDUCATION TABLE - Convert to cards with TRANSPARENT background === */
   .education {
     width: 100% !important;
     max-width: 100% !important;
@@ -171,12 +178,12 @@ hr, tr {
 
   .education tr {
     display: block !important;
-    background: white;
+    background: rgba(255, 255, 255, 0.15) !important; /* Semi-transparent */
+    backdrop-filter: blur(5px); /* Frosted glass effect */
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .education td {
@@ -185,28 +192,35 @@ hr, tr {
     padding: 5px 0 !important;
     border: none !important;
     text-align: left !important;
+    color: #fff !important; /* White text for better contrast */
   }
 
   /* Add labels to education table cells */
   .education td:first-child::before {
-    content: "Year: ";
+    content: "📅 ";
     font-weight: bold;
-    color: #666dbf;
+    color: #fff;
   }
 
   .education td:nth-child(2)::before {
-    content: "Qualification: ";
+    content: "🎓 ";
     font-weight: bold;
-    color: #666dbf;
+    color: #fff;
   }
 
   .education td:nth-child(3)::before {
-    content: "Institution: ";
+    content: "🏛️ ";
     font-weight: bold;
-    color: #666dbf;
+    color: #fff;
   }
 
-  /* === WORK HISTORY - Convert to cards === */
+  /* Keep heading color */
+  .education h2 {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  /* === WORK HISTORY - Convert to cards with TRANSPARENT background === */
   table[width="600"] {
     width: 100% !important;
     max-width: 100% !important;
@@ -219,12 +233,12 @@ hr, tr {
 
   table[width="600"] tr {
     display: block !important;
-    background: white;
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(5px);
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   table[width="600"] td {
@@ -233,9 +247,15 @@ hr, tr {
     padding: 5px 0 !important;
     border: none !important;
     text-align: left !important;
+    color: #fff !important;
   }
 
-  /* === PROGRAMMING SKILLS - Convert to cards === */
+  table[width="600"] h2 {
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  /* === PROGRAMMING SKILLS - Convert to cards with TRANSPARENT background === */
   #programming {
     width: 100% !important;
     max-width: 100% !important;
@@ -252,12 +272,12 @@ hr, tr {
 
   #programming tr {
     display: block !important;
-    background: white;
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(5px);
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   #programming td {
@@ -266,31 +286,52 @@ hr, tr {
     padding: 5px 0 !important;
     border: none !important;
     text-align: left !important;
+    color: #fff !important;
   }
 
   #programming td:first-child::before {
-    content: "From: ";
+    content: "📚 ";
     font-weight: bold;
-    color: #666dbf;
+    color: #fff;
+  }
+
+  /* Lists inside programming table */
+  #programming ul > li {
+    color: #fff !important;
+  }
+
+  #programming a {
+    color: #93B5E1 !important;
   }
 
   /* Headings */
   h1 {
     font-size: 24px !important;
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 
   h2 {
     font-size: 20px !important;
+    color: #fff !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 
   h3 {
     font-size: 16px !important;
+    color: #fff !important;
+  }
+
+  /* Links in headings */
+  h3 a {
+    color: #93B5E1 !important;
   }
 
   /* Lists */
   ul > li {
     font-size: 13px;
     line-height: 1.5;
+    color: #fff !important;
   }
 
   /* Container */
@@ -303,6 +344,7 @@ hr, tr {
   /* HR */
   hr {
     width: 90% !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
   }
 
   /* Iframes/Videos */
@@ -318,6 +360,7 @@ hr, tr {
     display: inline-block;
     padding: 5px 0;
     word-break: break-word;
+    color: #93B5E1 !important;
   }
 
   /* Remove table borders */
@@ -325,6 +368,12 @@ hr, tr {
   table[width="600"] td,
   #programming td {
     border-bottom: none !important;
+  }
+
+  /* Contact section */
+  div[align="center"] i,
+  div[align="center"] p {
+    color: #fff !important;
   }
 }
 
