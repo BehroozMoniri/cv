@@ -423,3 +423,251 @@ div > #child {
         padding: 10px 15px !important;
     }
 }
+@media screen and (max-width: 768px) {
+  
+  /* Fix gradient background for mobile */
+  body {
+    background: linear-gradient(135deg, rgba(36,35,0,1) 0%, rgba(0,251,34,1) 50%, rgba(0,212,255,1) 100%);
+    background-attachment: fixed;
+    font-size: 14px;
+  }
+  
+  /* Make heading responsive */
+  #bigfont {
+    font-size: 28px !important;
+    word-wrap: break-word;
+  }
+  
+  /* Center and resize profile image */
+  .img-container {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .personal {
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  /* Make summary text readable */
+  .summary {
+    padding: 10px 15px !important;
+  }
+  
+  #top {
+    padding: 15px !important;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  /* FIXED: Better table handling - keep as table but make scrollable */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+  }
+  
+  /* Education table - keep as table but make it scrollable */
+  .education {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: table !important; /* Keep as table */
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  
+  .education td {
+    padding: 8px 6px;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+  }
+  
+  .education thead {
+    display: table-header-group !important; /* Keep header */
+    background-color: #f5f5f5;
+  }
+  
+  .education thead td {
+    font-weight: bold;
+    padding: 10px 6px;
+  }
+  
+  /* Work History and other tables - keep as tables */
+  table[width="600"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: table !important;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  
+  table[width="600"] td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+    display: table-cell !important; /* Keep as table cell */
+  }
+  
+  table[width="600"] tr {
+    display: table-row !important; /* Keep as table row */
+  }
+  
+  /* Programming skills table */
+  #programming {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: table !important;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  
+  #programming td {
+    padding: 8px 6px;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+    display: table-cell !important;
+  }
+  
+  #programming tr {
+    display: table-row !important;
+  }
+  
+  /* Wrap tables in scrollable container */
+  .table-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 10px 0;
+  }
+  
+  /* Make list items responsive */
+  ul > li {
+    margin-left: 10px;
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  /* Make headings smaller */
+  h1 {
+    font-size: 24px !important;
+  }
+  
+  h2 {
+    font-size: 20px !important;
+    word-break: break-word;
+  }
+  
+  h3 {
+    font-size: 16px !important;
+  }
+  
+  /* Make container full width */
+  .container {
+    padding: 10px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Fix any iframes/videos */
+  iframe {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+  
+  /* Fix horizontal rule */
+  hr {
+    width: 90% !important;
+  }
+  
+  /* Make links more tappable */
+  a {
+    display: inline-block;
+    padding: 5px 0;
+    word-break: break-word;
+  }
+  
+  /* Fix spacing */
+  .row {
+    margin: 0;
+    padding: 5px;
+  }
+  
+  [class*="col-"] {
+    padding: 5px !important;
+    float: none !important;
+    width: 100% !important;
+    border: none !important;
+  }
+  
+  /* Fix contact section */
+  div[align="center"] h1,
+  div[align="center"] p {
+    word-break: break-word;
+  }
+}
+
+/* Small phones (under 480px) - even smaller text */
+@media screen and (max-width: 480px) {
+  #bigfont {
+    font-size: 22px !important;
+  }
+  
+  body {
+    font-size: 12px;
+  }
+  
+  .personal {
+    max-width: 70%;
+  }
+  
+  #top {
+    font-size: 12px;
+    padding: 10px !important;
+  }
+  
+  h1 {
+    font-size: 20px !important;
+  }
+  
+  h2 {
+    font-size: 17px !important;
+  }
+  
+  ul > li {
+    font-size: 12px;
+  }
+  
+  .education td,
+  table[width="600"] td,
+  #programming td {
+    font-size: 12px;
+    padding: 6px 4px;
+  }
+}
+
+/* Fix for tablet (768px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  .personal {
+    max-width: 60%;
+    height: auto;
+  }
+  
+  #bigfont {
+    font-size: 40px !important;
+  }
+}
