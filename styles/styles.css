@@ -66,7 +66,7 @@ img:hover {
   border-radius: 80%;
 }
 
-/* === TABLES - Desktop only === */
+/* === TABLES === */
 .education {
   font-weight: bold;
 }
@@ -87,7 +87,7 @@ hr, tr {
   padding: 50px;
 }
 
-/* === RESPONSIVE GRID === */
+/* === RESPONSIVE GRID (your custom bootstrap replacement) === */
 @media (min-width: 1200px) {
   .col-lg-4 {
     float: left;
@@ -106,7 +106,7 @@ hr, tr {
   }
 }
 
-/* === MOBILE RESPONSIVE === */
+/* === MOBILE RESPONSIVE (SIMPLE & CLEAN) === */
 @media screen and (max-width: 768px) {
   /* Background */
   body {
@@ -154,124 +154,99 @@ hr, tr {
     padding: 10px !important;
   }
 
-  /* === EDUCATION TABLE - Convert to cards === */
+  /* === FIXED EDUCATION TABLE === */
   .education {
     width: 100% !important;
     max-width: 100% !important;
-    display: block !important;
-  }
-
-  .education thead {
-    display: none !important;
-  }
-
-  .education tbody {
-    display: block !important;
-  }
-
-  .education tr {
-    display: block !important;
-    background: white;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
+    border-collapse: collapse;
+    font-size: 13px;
   }
 
   .education td {
-    display: block !important;
-    width: 100% !important;
-    padding: 5px 0 !important;
-    border: none !important;
-    text-align: left !important;
+    padding: 10px 8px;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
   }
 
-  /* Add labels to education table cells */
-  .education td:first-child::before {
-    content: "Year: ";
+  /* Give proper widths to education table columns */
+  .education td:first-child {
+    width: 80px !important;
+    min-width: 80px !important;
     font-weight: bold;
-    color: #666dbf;
+    white-space: nowrap;
   }
 
-  .education td:nth-child(2)::before {
-    content: "Qualification: ";
+  .education td:nth-child(2) {
+    width: auto !important;
+    min-width: 120px !important;
+  }
+
+  .education td:nth-child(3) {
+    width: auto !important;
+    min-width: 100px !important;
+  }
+
+  .education thead {
+    display: table-header-group !important;
+    background-color: #f5f5f5;
+  }
+
+  .education thead td {
     font-weight: bold;
-    color: #666dbf;
+    padding: 12px 8px;
   }
 
-  .education td:nth-child(3)::before {
-    content: "Institution: ";
-    font-weight: bold;
-    color: #666dbf;
+  .education tr {
+    display: table-row !important;
   }
 
-  /* === WORK HISTORY - Convert to cards === */
+  /* === WORK HISTORY TABLE - keep as table with scroll === */
   table[width="600"] {
     width: 100% !important;
     max-width: 100% !important;
-    display: block !important;
-  }
-
-  table[width="600"] tbody {
-    display: block !important;
-  }
-
-  table[width="600"] tr {
-    display: block !important;
-    background: white;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
+    display: table !important;
+    border-collapse: collapse;
+    font-size: 13px;
   }
 
   table[width="600"] td {
-    display: block !important;
-    width: 100% !important;
-    padding: 5px 0 !important;
-    border: none !important;
-    text-align: left !important;
+    padding: 10px 8px;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+    display: table-cell !important;
   }
 
-  /* === PROGRAMMING SKILLS - Convert to cards === */
+  table[width="600"] tr {
+    display: table-row !important;
+  }
+
+  /* === PROGRAMMING SKILLS TABLE === */
   #programming {
     width: 100% !important;
     max-width: 100% !important;
-    display: block !important;
-  }
-
-  #programming thead {
-    display: none !important;
-  }
-
-  #programming tbody {
-    display: block !important;
-  }
-
-  #programming tr {
-    display: block !important;
-    background: white;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
+    display: table !important;
+    border-collapse: collapse;
+    font-size: 13px;
   }
 
   #programming td {
-    display: block !important;
-    width: 100% !important;
-    padding: 5px 0 !important;
-    border: none !important;
-    text-align: left !important;
+    padding: 8px 6px;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;
+    display: table-cell !important;
   }
 
-  #programming td:first-child::before {
-    content: "From: ";
-    font-weight: bold;
-    color: #666dbf;
+  #programming tr {
+    display: table-row !important;
+  }
+
+  /* Make tables horizontally scrollable */
+  .table-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 10px 0;
   }
 
   /* Headings */
@@ -319,13 +294,6 @@ hr, tr {
     padding: 5px 0;
     word-break: break-word;
   }
-
-  /* Remove table borders */
-  .education td,
-  table[width="600"] td,
-  #programming td {
-    border-bottom: none !important;
-  }
 }
 
 /* === SMALL PHONES === */
@@ -350,16 +318,20 @@ hr, tr {
     font-size: 17px !important;
   }
 
-  .education tr,
-  table[width="600"] tr,
-  #programming tr {
-    padding: 10px !important;
+  .education td {
+    font-size: 12px !important;
+    padding: 8px 4px !important;
   }
 
-  .education td,
+  .education td:first-child {
+    width: 60px !important;
+    min-width: 60px !important;
+  }
+
   table[width="600"] td,
   #programming td {
     font-size: 12px !important;
+    padding: 6px 4px !important;
   }
 }
 
