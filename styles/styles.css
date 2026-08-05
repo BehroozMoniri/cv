@@ -69,6 +69,24 @@ img:hover {
 /* === TABLES === */
 .education {
   font-weight: bold;
+  width: 600px !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+table[width="600"] {
+  width: 600px !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#programming {
+  width: 600px !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 hr, tr {
@@ -87,7 +105,7 @@ hr, tr {
   padding: 50px;
 }
 
-/* === RESPONSIVE GRID (your custom bootstrap replacement) === */
+/* === RESPONSIVE GRID === */
 @media (min-width: 1200px) {
   .col-lg-4 {
     float: left;
@@ -106,12 +124,18 @@ hr, tr {
   }
 }
 
-/* === MOBILE RESPONSIVE (SIMPLE & CLEAN) === */
+/* === MOBILE RESPONSIVE === */
 @media screen and (max-width: 768px) {
   /* Background */
+  html, body {
+    min-height: 100vh;
+    height: auto;
+  }
+  
   body {
     background: linear-gradient(135deg, rgba(36,35,0,1) 0%, rgba(0,251,34,1) 50%, rgba(0,212,255,1) 100%);
     background-attachment: fixed;
+    background-size: cover;
     font-size: 14px;
   }
 
@@ -154,21 +178,39 @@ hr, tr {
     padding: 10px !important;
   }
 
-  /* === FIXED EDUCATION TABLE === */
-  .education {
+  /* === TABLES ON MOBILE - Full width with scroll === */
+  .education,
+  table[width="600"],
+  #programming {
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 600px !important;
+    display: table !important;
     border-collapse: collapse;
     font-size: 13px;
   }
 
-  .education td {
-    padding: 10px 8px;
+  .education td,
+  table[width="600"] td,
+  #programming td {
+    padding: 8px 6px;
     border-bottom: 1px solid #ddd;
     word-break: break-word;
+    display: table-cell !important;
   }
 
-  /* Give proper widths to education table columns */
+  .education tr,
+  table[width="600"] tr,
+  #programming tr {
+    display: table-row !important;
+  }
+
+  .education thead {
+    display: table-header-group !important;
+    background-color: #f5f5f5;
+  }
+
+  /* === EDUCATION TABLE COLUMN WIDTHS === */
   .education td:first-child {
     width: 80px !important;
     min-width: 80px !important;
@@ -186,61 +228,7 @@ hr, tr {
     min-width: 100px !important;
   }
 
-  .education thead {
-    display: table-header-group !important;
-    background-color: #f5f5f5;
-  }
-
-  .education thead td {
-    font-weight: bold;
-    padding: 12px 8px;
-  }
-
-  .education tr {
-    display: table-row !important;
-  }
-
-  /* === WORK HISTORY TABLE - keep as table with scroll === */
-  table[width="600"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: table !important;
-    border-collapse: collapse;
-    font-size: 13px;
-  }
-
-  table[width="600"] td {
-    padding: 10px 8px;
-    border-bottom: 1px solid #ddd;
-    word-break: break-word;
-    display: table-cell !important;
-  }
-
-  table[width="600"] tr {
-    display: table-row !important;
-  }
-
-  /* === PROGRAMMING SKILLS TABLE === */
-  #programming {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: table !important;
-    border-collapse: collapse;
-    font-size: 13px;
-  }
-
-  #programming td {
-    padding: 8px 6px;
-    border-bottom: 1px solid #ddd;
-    word-break: break-word;
-    display: table-cell !important;
-  }
-
-  #programming tr {
-    display: table-row !important;
-  }
-
-  /* Make tables horizontally scrollable */
+  /* === TABLE WRAPPER FOR SCROLLING === */
   .table-wrapper {
     display: block;
     width: 100%;
@@ -334,6 +322,7 @@ hr, tr {
     padding: 6px 4px !important;
   }
 }
+
 
 /* 
 body {  /* background-color: #E4F5E5; 
@@ -1007,4 +996,5 @@ div > #child {
   #bigfont {
     font-size: 40px !important;
   }
-} */
+} 
+*/
