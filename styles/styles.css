@@ -68,11 +68,55 @@ img:hover {
 
 /* === TABLES === */
 .education {
-  font-weight: bold;
   width: 600px !important;
   max-width: 600px !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+/* Work history table already has width="600" */
+table[width="600"] {
+  width: 600px !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Programming table also same width */
+#programming {
+  width: 600px !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Remove the table-wrapper making it full width on desktop */
+.table-wrapper {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 10px 0;
+}
+
+/* But keep it only for mobile scrolling */
+@media screen and (max-width: 768px) {
+  .table-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 10px 0;
+  }
+  
+  /* On mobile, make tables full width but scrollable */
+  .education,
+  table[width="600"],
+  #programming {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 600px !important; /* Keep minimum width so content doesn't squish */
+  }
 }
 
 table[width="600"] {
