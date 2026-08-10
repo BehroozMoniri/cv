@@ -63,7 +63,7 @@ img:hover {
 }
 
 .circular {
-  border-radius: 80%;
+  border-radius: 25px;
 }
 
 /* === TABLES === */
