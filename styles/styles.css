@@ -91,7 +91,7 @@ table[width="600"] {
 }
 
 /* Remove the table-wrapper making it full width on desktop */
-.table-wrapper {
+table.table-wrapper {
   /*display: block;
   width: 100%;*/
   
