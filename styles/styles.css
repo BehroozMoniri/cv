@@ -96,7 +96,7 @@ table[width="600"] {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin: 10px 0;
+  margin: 48px 0;
 }
 
 /* But keep it only for mobile scrolling */
@@ -106,7 +106,7 @@ table[width="600"] {
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: 10px 0;
+    margin: 32px 0;
   }
   
   /* On mobile, make tables full width but scrollable */
@@ -137,9 +137,9 @@ hr, tr {
   border-style: dotted none none;
   border-width: 1px;
   border-color: grey;
-  padding-top: 25px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  padding-top: 45px;
+  margin-top: 42px;
+  margin-bottom: 42px;
   height: 40px;
   width: 50%;
 }
