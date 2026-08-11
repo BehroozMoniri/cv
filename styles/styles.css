@@ -96,7 +96,7 @@ table[width="600"] {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  margin: 48px 0;
+  margin: 96px 0;
 }
 
 /* But keep it only for mobile scrolling */
