@@ -93,10 +93,14 @@ table[width="600"] {
 /* Remove the table-wrapper making it full width on desktop */
 .table-wrapper {
   display: block;
-  width: 100%;
+  /*width: 100%;*/
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin: 96px 0;
+  width: 600px !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* But keep it only for mobile scrolling */
