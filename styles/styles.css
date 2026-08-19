@@ -76,12 +76,14 @@ img:hover {
 
 /* Work history table already has width="600" */
 table[width="600"] {
-  width: 600px !important;
-  max-width: 600px !important;
+  width: 650px !important;
+  max-width: 650px !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
-
+.first-column {
+  width: 100px;
+}
 /* Programming table also same width */
 #programming {
   width: 600px !important;
