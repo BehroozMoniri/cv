@@ -1,400 +1,368 @@
-/* === BASE STYLES === */
-body {
-  background: linear-gradient(
-    90deg,
-    rgba(36, 35, 0, 1) 0%,
-    rgba(0, 251, 34, 1) 0%,
-    rgba(0, 212, 255, 1) 76%
-  );
-  font-size: 15px;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
-}
+ * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-.container {
-  text-align: center;
-}
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 5em;
+        padding: 0 20px;
+        /* ===== GRADIENT BACKGROUND ON BODY ===== */
+        background: linear-gradient(
+          90deg,
+          rgba(0, 251, 34, 0.12) 0%,
+          rgba(0, 212, 255, 0.12) 76%
+        );
+        min-height: 100vh;
+        color: #222;
+      }
+      li {
+        /* line-height: 1.9rem; */
+        letter-spacing: 0.5px;
+        line-gap-override: 1.9rem;
+      }
 
-h1,
-h2 {
-  color: #666dbf;
-}
+      /* ===== HEADER ===== */
+      #heading {
+        text-align: center;
+        padding: 30px 0 20px;
+      }
+      #bigfont {
+        font-size: 2.8rem;
+        font-family: "Rock Salt", cursive;
+        margin: 0;
+      }
 
-h1 {
-  font-size: 32px;
-}
+      /* ===== PROFILE ROW (Photo + Summary) ===== */
+      .profile-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 30px;
+        max-width: 1100px;
+        margin: 20px auto;
+        align-items: start;
+      }
+      .img-container {
+        text-align: center;
+      }
+      .personal {
+        width: 100%;
+        max-width: 280px;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        border: 4px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .summary p {
+        font-size: 1.4rem;
+        line-height: 1.9;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 12px;
+        backdrop-filter: blur(4px);
+      }
+      .summary h3 {
+        text-align: center;
+        margin-top: 15px;
+      }
 
-h2 {
-  font-size: 24px;
-}
+      /* ===== SECTION HEADINGS ===== */
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 50px 0 25px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-/* === HEADINGS === */
-#bigfont {
-  font-family: "Rock Salt", cursive;
-  font-size: 50px;
-  text-align: center;
-}
+      /* ===== GRID CONTAINERS ===== */
+      .grid-container {
+        display: grid;
+        gap: 20px;
+        max-width: 1100px;
+        margin: 0 auto 30px;
+      }
 
-#heading {
-  color: #93b5e1;
-}
+      /* ===== EDUCATION GRID – NO BOXES ===== */
+      .education-grid {
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 6px 20px;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 20px 25px;
+        border-radius: 12px;
+        backdrop-filter: blur(4px);
+      }
+      .education-grid .grid-item {
+        padding: 6px 0;
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0;
+      }
+      .education-grid .grid-item:hover {
+        box-shadow: none !important;
+        background: transparent !important;
+      }
+      .education-grid .item-year {
+        font-weight: 600;
+        color: #2c3e50;
+      }
+      .education-grid .item-desc {
+        font-weight: 500;
+      }
+      .education-grid .item-institution {
+        color: #555;
+      }
+      .education-grid a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+      .education-grid a:hover {
+        text-decoration: underline;
+      }
 
-/* === LISTS === */
-ul > li {
-  margin-left: 15px;
-  padding-left: 15px;
-  list-style-type: ">";
-  line-height: 1.2em;
-  margin-bottom: 10px;
-}
+      /* ===== WORK GRID – with subtle cards ===== */
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+      .work-grid .grid-item {
+        padding: 18px 22px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        backdrop-filter: blur(4px);
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .work-grid .grid-item:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+      }
+      .work-grid .job-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #2c3e50;
+        margin-bottom: 4px;
+      }
+      .work-grid .job-dates {
+        font-weight: 600;
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+      }
+      .work-grid .job-desc {
+        line-height: 1.9;
+      }
 
-ol > li {
-  margin-left: 30px;
-  padding-top: 10px;
-}
+      /* ===== SINGLE COLUMN SECTIONS – with subtle cards ===== */
+      .single-col-grid {
+        grid-template-columns: 1fr;
+      }
+      .single-col-grid .grid-item {
+        padding: 18px 22px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        backdrop-filter: blur(4px);
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .single-col-grid .grid-item:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        transform: translateY(-2px);
+      }
+      .single-col-grid ul {
+        padding-left: 25px;
+        margin: 0;
+        line-height: 1.9;
+      }
+      .single-col-grid ul li {
+        margin-bottom: 6px;
+      }
 
-/* === IMAGES === */
-img {
-  padding-left: 1px;
-  filter: drop-shadow(10px 10px 5px #44ddbc);
-  height: auto;
-  width: auto;
-}
+      /* ===== CONTACT & VIDEO ===== */
+      .contact-section {
+        text-align: center;
+        max-width: 800px;
+        margin: 40px auto;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 30px 40px;
+        border-radius: 16px;
+        backdrop-filter: blur(4px);
+      }
+      .contact-section h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+      }
+      .contact-section i {
+        font-size: 1.2rem;
+        font-style: italic;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 6px 18px;
+        border-radius: 30px;
+        display: inline-block;
+      }
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        margin-top: 20px;
+        border-radius: 12px;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
 
-img:hover {
-  filter: drop-shadow(15px 20px 9px #44dbdd);
-}
+      /* ===== RESPONSIVE BREAKPOINTS ===== */
 
-.personal {
-  background-color: #e4f5e5;
-}
+      @media (max-width: 992px) {
+        .profile-grid {
+          grid-template-columns: 1fr 1.5fr;
+          gap: 20px;
+        }
+        .education-grid {
+          grid-template-columns: 1fr 2fr 1fr;
+          gap: 6px 15px;
+          padding: 16px 18px;
+        }
+      }
 
-.circular {
-  border-radius: 25px; /* 80% */
-}
+      @media (max-width: 768px) {
+        body {
+          padding: 0 12px;
+        }
+        #bigfont {
+          font-size: 2.2rem;
+        }
 
-/* === TABLES === */
-.education {
-  width: 600px !important;
-  max-width: 600px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-.first-column {
-  width: 100px;
-}
-/* Work history table already has width="600" */
-table[width="600"] {
-  width: 650px !important;
-  max-width: 650px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+        .profile-grid {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 10px;
+        }
+        .personal {
+          max-width: 200px;
+        }
+        .summary {
+          text-align: left;
+        }
+        .summary p {
+          padding: 16px;
+        }
 
-/* Programming table also same width */
-#programming {
-  width: 600px !important;
-  max-width: 600px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+        .education-grid {
+          grid-template-columns: 1fr 2fr;
+          gap: 4px 15px;
+          padding: 14px 16px;
+        }
+        .education-grid .item-institution {
+          grid-column: 2 / 3;
+          font-size: 0.9rem;
+          color: #666;
+        }
 
-/* Remove the table-wrapper making it full width on desktop */
-table.table-wrapper {
-  /*display: block;
-  width: 100%;*/
+        .contact-section {
+          padding: 20px 20px;
+        }
+      }
 
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin: 96px 0;
-  width: 600px !important;
-  max-width: 600px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+      @media (max-width: 480px) {
+        body {
+          padding: 0 8px;
+        }
+        #bigfont {
+          font-size: 1.8rem;
+        }
+        .section-title {
+          font-size: 1.5rem;
+          margin-top: 30px;
+          border-bottom-width: 1px;
+        }
 
-/* But keep it only for mobile scrolling */
-@media screen and (max-width: 768px) {
-  .table-wrapper {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin: 32px 0;
-  }
+        .education-grid {
+          grid-template-columns: 1fr;
+          gap: 2px;
+          padding: 12px 14px;
+        }
+        .education-grid .grid-item {
+          padding: 4px 0;
+        }
+        .education-grid .item-year {
+          font-size: 0.9rem;
+        }
+        .education-grid .item-institution {
+          font-size: 0.85rem;
+          color: #666;
+        }
 
-  /* On mobile, make tables full width but scrollable */
-  .education,
-  table[width="600"],
-  #programming {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 600px !important; /* Keep minimum width so content doesn't squish */
-  }
-}
+        .grid-container {
+          gap: 12px;
+        }
+        .grid-item {
+          padding: 14px;
+        }
+        .work-grid .job-title {
+          font-size: 1rem;
+        }
+        .single-col-grid ul {
+          padding-left: 18px;
+          font-size: 0.95rem;
+        }
+        .contact-section {
+          padding: 16px 14px;
+        }
+        .contact-section i {
+          font-size: 1rem;
+          padding: 4px 14px;
+        }
+      }
 
-table[width="600"] {
-  width: 600px !important;
-  max-width: 600px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+      /* Tablet-specific education layout: year in col 1, desc+institution in col 2 */
+      @media (max-width: 768px) and (min-width: 481px) {
+        .education-grid {
+          grid-template-columns: 1fr 2fr;
+          gap: 4px 15px;
+          padding: 14px 16px;
+        }
+        .education-grid .item-desc {
+          grid-column: 2 / 3;
+          grid-row: auto;
+        }
+        .education-grid .item-institution {
+          grid-column: 2 / 3;
+          grid-row: auto;
+          font-size: 0.9rem;
+          color: #666;
+        }
+        .education-grid .item-year {
+          grid-column: 1 / 2;
+          font-weight: 700;
+        }
+        .education-grid .grid-item {
+          padding: 4px 0;
+        }
+      }
 
-#programming {
-  width: 600px !important;
-  max-width: 600px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-hr,
-tr {
-  border-style: dotted none none;
-  border-width: 1px;
-  border-color: grey;
-  padding-top: 64px;
-  margin-top: 64px;
-  margin-bottom: 64px;
-  height: 40px;
-  width: 50%;
-}
-
-/* === LAYOUT === */
-#top {
-  padding: 50px;
-}
-
-/* === RESPONSIVE GRID === */
-@media (min-width: 1200px) {
-  .col-lg-4 {
-    float: left;
-    width: 33.33%;
-  }
-  .col-lg-6 {
-    float: left;
-    width: 50%;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .col-md-6 {
-    float: left;
-    width: 50%;
-  }
-}
-
-/* === MOBILE RESPONSIVE === */
-@media screen and (max-width: 768px) {
-  /* Background */
-  html,
-  body {
-    min-height: 100vh;
-    height: auto;
-  }
-
-  body {
-    background: linear-gradient(
-      135deg,
-      rgba(36, 35, 0, 1) 0%,
-      rgba(0, 251, 34, 1) 50%,
-      rgba(0, 212, 255, 1) 100%
-    );
-    background-attachment: fixed;
-    background-size: cover;
-    font-size: 14px;
-  }
-
-  /* Heading */
-  #bigfont {
-    font-size: 28px !important;
-  }
-
-  /* Image */
-  .img-container {
-    text-align: center;
-    padding: 10px;
-  }
-
-  .personal {
-    max-width: 80%;
-    height: auto;
-    border-radius: 50%;
-  }
-
-  /* Text */
-  .summary {
-    padding: 10px 15px !important;
-  }
-
-  #top {
-    padding: 15px !important;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  /* COLUMNS - make them full width */
-  .col-lg-4,
-  .col-lg-6,
-  .col-md-6,
-  .col-sm-12,
-  .col-xs-12 {
-    float: none !important;
-    width: 100% !important;
-    padding: 10px !important;
-  }
-
-  /* === TABLES ON MOBILE - Full width with scroll === */
-  .education,
-  table[width="600"],
-  #programming {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 600px !important;
-    display: table !important;
-    border-collapse: collapse;
-    font-size: 13px;
-  }
-
-  .education td,
-  table[width="600"] td,
-  #programming td {
-    padding: 8px 6px;
-    border-bottom: 1px solid #ddd;
-    word-break: break-word;
-    display: table-cell !important;
-  }
-
-  .education tr,
-  table[width="600"] tr,
-  #programming tr {
-    display: table-row !important;
-    margin-top: 16px;
-  }
-
-  .education thead {
-    display: table-header-group !important;
-    background-color: #f5f5f5;
-  }
-
-  /* === EDUCATION TABLE COLUMN WIDTHS === */
-  .education td:first-child {
-    width: 80px !important;
-    min-width: 80px !important;
-    font-weight: bold;
-    white-space: nowrap;
-  }
-
-  .education td:nth-child(2) {
-    width: auto !important;
-    min-width: 120px !important;
-  }
-
-  .education td:nth-child(3) {
-    width: auto !important;
-    min-width: 100px !important;
-  }
-
-  /* === TABLE WRAPPER FOR SCROLLING === */
-  .table-wrapper {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    margin: 10px 0;
-  }
-
-  /* Headings */
-  h1 {
-    font-size: 24px !important;
-  }
-
-  h2 {
-    font-size: 20px !important;
-  }
-
-  h3 {
-    font-size: 16px !important;
-  }
-
-  /* Lists */
-  ul > li {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-
-  /* Container */
-  .container {
-    padding: 10px;
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* HR */
-  hr {
-    width: 90% !important;
-  }
-
-  /* Iframes/Videos */
-  iframe {
-    width: 100% !important;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-  }
-
-  /* Links */
-  a {
-    display: inline-block;
-    padding: 5px 0;
-    word-break: break-word;
-  }
-}
-
-/* === SMALL PHONES === */
-@media screen and (max-width: 480px) {
-  #bigfont {
-    font-size: 22px !important;
-  }
-
-  body {
-    font-size: 12px;
-  }
-
-  .personal {
-    max-width: 70%;
-  }
-
-  h1 {
-    font-size: 20px !important;
-  }
-
-  h2 {
-    font-size: 17px !important;
-  }
-
-  .education td {
-    font-size: 12px !important;
-    padding: 8px 4px !important;
-  }
-
-  .education td:first-child {
-    width: 60px !important;
-    min-width: 60px !important;
-  }
-
-  table[width="600"] td,
-  #programming td {
-    font-size: 12px !important;
-    padding: 6px 4px !important;
-  }
-}
+      a {
+        word-break: break-word;
+      }
