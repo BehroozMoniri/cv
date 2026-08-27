@@ -118,7 +118,9 @@
     <div class="grid-container work-grid">
       <div class="grid-item">
         <div class="job-title">Teacher of Mathematics</div>
-        <div class="job-dates">UK, Qatar, Italy and Spain</div>
+        <div class="job-dates">
+          UK, Qatar, Italy and Spain — 2013–<span id="date-display"></span>
+        </div>
         <div class="job-desc">
           Teaching IGCSE, A-level Mathematics and International Baccalaureate
           (IB) Diploma Mathematics, with fully Qualified Teacher Status (QTS).
@@ -242,4 +244,12 @@
       </div>
     </div>
   </body>
+  <script defer>
+    const now = new Date();
+    const month = now.toLocaleString("default", { month: "short" });
+    const year = now.getFullYear();
+    const monthYear = `${month} ${year}`;
+    document.getElementById("date-display").textContent = year;
+    //console.log(monthYear); // "Aug 2026"
+  </script>
 </html>
