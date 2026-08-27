@@ -1,368 +1,373 @@
- * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-      body {
-        font-family: "Open Sans", sans-serif;
-        margin-bottom: 5em;
-        padding: 0 20px;
-        /* ===== GRADIENT BACKGROUND ON BODY ===== */
-        background: linear-gradient(
-          90deg,
-          rgba(0, 251, 34, 0.12) 0%,
-          rgba(0, 212, 255, 0.12) 76%
-        );
-        min-height: 100vh;
-        color: #222;
-      }
-      li {
-        /* line-height: 1.9rem; */
-        letter-spacing: 0.5px;
-        line-gap-override: 1.9rem;
-      }
+body {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 5em;
+  padding: 0 20px;
+  /* ===== GRADIENT BACKGROUND ON BODY ===== */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 251, 34, 0.12) 0%,
+    rgba(0, 212, 255, 0.12) 76%
+  );
+  min-height: 100vh;
+  color: #222;
+}
+li {
+  /* line-height: 1.9rem; */
+  letter-spacing: 0.5px;
+  line-gap-override: 1.9rem;
+}
 
-      /* ===== HEADER ===== */
-      #heading {
-        text-align: center;
-        padding: 30px 0 20px;
-      }
-      #bigfont {
-        font-size: 2.8rem;
-        font-family: "Rock Salt", cursive;
-        margin: 0;
-      }
+/* ===== HEADER ===== */
+#heading {
+  text-align: center;
+  padding: 30px 0 20px;
+}
+#bigfont {
+  font-size: 2.8rem;
+  font-family: "Rock Salt", cursive;
+  margin: 0;
+}
 
-      /* ===== PROFILE ROW (Photo + Summary) ===== */
-      .profile-grid {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 30px;
-        max-width: 1100px;
-        margin: 20px auto;
-        align-items: start;
-      }
-      .img-container {
-        text-align: center;
-      }
-      .personal {
-        width: 100%;
-        max-width: 280px;
-        border-radius: 50%;
-        object-fit: cover;
-        aspect-ratio: 1 / 1;
-        border: 4px solid rgba(255, 255, 255, 0.8);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
-      .summary p {
-        font-size: 1.4rem;
-        line-height: 1.9;
-        background: rgba(255, 255, 255, 0.5);
-        padding: 20px;
-        border-radius: 12px;
-        backdrop-filter: blur(4px);
-      }
-      .summary h3 {
-        text-align: center;
-        margin-top: 15px;
-      }
+/* ===== PROFILE ROW (Photo + Summary) ===== */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 20px auto;
+  align-items: start;
+}
+.img-container {
+  text-align: center;
+}
+.personal {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1.4 / 1.7;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 12px rgba(39, 7, 201, 0.1);
+  transition: all 0.5s;
+}
+.personal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(42, 3, 239, 0.2);
+}
+.summary p {
+  font-size: 1.4rem;
+  line-height: 1.9;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+.summary h3 {
+  text-align: center;
+  margin-top: 15px;
+}
 
-      /* ===== SECTION HEADINGS ===== */
-      .section-title {
-        text-align: center;
-        font-size: 2rem;
-        margin: 50px 0 25px;
-        padding-bottom: 8px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+/* ===== SECTION HEADINGS ===== */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 50px 0 25px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-      /* ===== GRID CONTAINERS ===== */
-      .grid-container {
-        display: grid;
-        gap: 20px;
-        max-width: 1100px;
-        margin: 0 auto 30px;
-      }
+/* ===== GRID CONTAINERS ===== */
+.grid-container {
+  display: grid;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto 30px;
+}
 
-      /* ===== EDUCATION GRID – NO BOXES ===== */
-      .education-grid {
-        grid-template-columns: 1fr 2fr 1fr;
-        gap: 6px 20px;
-        background: rgba(255, 255, 255, 0.5);
-        padding: 20px 25px;
-        border-radius: 12px;
-        backdrop-filter: blur(4px);
-      }
-      .education-grid .grid-item {
-        padding: 6px 0;
-        background: transparent !important;
-        box-shadow: none !important;
-        border: none !important;
-        border-radius: 0;
-      }
-      .education-grid .grid-item:hover {
-        box-shadow: none !important;
-        background: transparent !important;
-      }
-      .education-grid .item-year {
-        font-weight: 600;
-        color: #2c3e50;
-      }
-      .education-grid .item-desc {
-        font-weight: 500;
-      }
-      .education-grid .item-institution {
-        color: #555;
-      }
-      .education-grid a {
-        color: #0066cc;
-        text-decoration: none;
-      }
-      .education-grid a:hover {
-        text-decoration: underline;
-      }
+/* ===== EDUCATION GRID – NO BOXES ===== */
+.education-grid {
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 6px 20px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+.education-grid .grid-item {
+  padding: 6px 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0;
+}
+.education-grid .grid-item:hover {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.education-grid .item-year {
+  font-weight: 600;
+  color: #2c3e50;
+}
+.education-grid .item-desc {
+  font-weight: 500;
+}
+.education-grid .item-institution {
+  color: #555;
+}
+.education-grid a {
+  color: #0066cc;
+  text-decoration: none;
+}
+.education-grid a:hover {
+  text-decoration: underline;
+}
 
-      /* ===== WORK GRID – with subtle cards ===== */
-      .work-grid {
-        grid-template-columns: 1fr;
-      }
-      .work-grid .grid-item {
-        padding: 18px 22px;
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        backdrop-filter: blur(4px);
-        transition:
-          box-shadow 0.2s,
-          transform 0.2s;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .work-grid .grid-item:hover {
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-        transform: translateY(-2px);
-      }
-      .work-grid .job-title {
-        font-weight: 700;
-        font-size: 1.1rem;
-        color: #2c3e50;
-        margin-bottom: 4px;
-      }
-      .work-grid .job-dates {
-        font-weight: 600;
-        color: #888;
-        font-size: 0.9rem;
-        margin-bottom: 8px;
-      }
-      .work-grid .job-desc {
-        line-height: 1.9;
-      }
+/* ===== WORK GRID – with subtle cards ===== */
+.work-grid {
+  grid-template-columns: 1fr;
+}
+.work-grid .grid-item {
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(4px);
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.work-grid .grid-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+.work-grid .job-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+.work-grid .job-dates {
+  font-weight: 600;
+  color: #373737;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+.work-grid .job-desc {
+  line-height: 1.9;
+}
 
-      /* ===== SINGLE COLUMN SECTIONS – with subtle cards ===== */
-      .single-col-grid {
-        grid-template-columns: 1fr;
-      }
-      .single-col-grid .grid-item {
-        padding: 18px 22px;
-        background: rgba(255, 255, 255, 0.5);
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        backdrop-filter: blur(4px);
-        transition:
-          box-shadow 0.2s,
-          transform 0.2s;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .single-col-grid .grid-item:hover {
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-        transform: translateY(-2px);
-      }
-      .single-col-grid ul {
-        padding-left: 25px;
-        margin: 0;
-        line-height: 1.9;
-      }
-      .single-col-grid ul li {
-        margin-bottom: 6px;
-      }
+/* ===== SINGLE COLUMN SECTIONS – with subtle cards ===== */
+.single-col-grid {
+  grid-template-columns: 1fr;
+}
+.single-col-grid .grid-item {
+  padding: 18px 22px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(4px);
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.single-col-grid .grid-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+.single-col-grid ul {
+  padding-left: 25px;
+  margin: 0;
+  line-height: 1.9;
+}
+.single-col-grid ul li {
+  margin-bottom: 6px;
+}
 
-      /* ===== CONTACT & VIDEO ===== */
-      .contact-section {
-        text-align: center;
-        max-width: 800px;
-        margin: 40px auto;
-        background: rgba(255, 255, 255, 0.5);
-        padding: 30px 40px;
-        border-radius: 16px;
-        backdrop-filter: blur(4px);
-      }
-      .contact-section h1 {
-        font-size: 2rem;
-        margin-bottom: 15px;
-      }
-      .contact-section i {
-        font-size: 1.2rem;
-        font-style: italic;
-        background: rgba(255, 255, 255, 0.5);
-        padding: 6px 18px;
-        border-radius: 30px;
-        display: inline-block;
-      }
-      .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-        margin-top: 20px;
-        border-radius: 12px;
-      }
-      .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
+/* ===== CONTACT & VIDEO ===== */
+.contact-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 30px 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+}
+.contact-section h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.contact-section i {
+  font-size: 1.2rem;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 6px 18px;
+  border-radius: 30px;
+  display: inline-block;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
-      /* ===== RESPONSIVE BREAKPOINTS ===== */
+/* ===== RESPONSIVE BREAKPOINTS ===== */
 
-      @media (max-width: 992px) {
-        .profile-grid {
-          grid-template-columns: 1fr 1.5fr;
-          gap: 20px;
-        }
-        .education-grid {
-          grid-template-columns: 1fr 2fr 1fr;
-          gap: 6px 15px;
-          padding: 16px 18px;
-        }
-      }
+@media (max-width: 992px) {
+  .profile-grid {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+  }
+  .education-grid {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 6px 15px;
+    padding: 16px 18px;
+  }
+}
 
-      @media (max-width: 768px) {
-        body {
-          padding: 0 12px;
-        }
-        #bigfont {
-          font-size: 2.2rem;
-        }
+@media (max-width: 768px) {
+  body {
+    padding: 0 12px;
+  }
+  #bigfont {
+    font-size: 2.2rem;
+  }
 
-        .profile-grid {
-          grid-template-columns: 1fr;
-          text-align: center;
-          gap: 10px;
-        }
-        .personal {
-          max-width: 200px;
-        }
-        .summary {
-          text-align: left;
-        }
-        .summary p {
-          padding: 16px;
-        }
+  .profile-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+  }
+  .personal {
+    max-width: 200px;
+  }
+  .summary {
+    text-align: left;
+  }
+  .summary p {
+    padding: 16px;
+  }
 
-        .education-grid {
-          grid-template-columns: 1fr 2fr;
-          gap: 4px 15px;
-          padding: 14px 16px;
-        }
-        .education-grid .item-institution {
-          grid-column: 2 / 3;
-          font-size: 0.9rem;
-          color: #666;
-        }
+  .education-grid {
+    grid-template-columns: 1fr 2fr;
+    gap: 4px 15px;
+    padding: 14px 16px;
+  }
+  .education-grid .item-institution {
+    grid-column: 2 / 3;
+    font-size: 0.9rem;
+    color: #666;
+  }
 
-        .contact-section {
-          padding: 20px 20px;
-        }
-      }
+  .contact-section {
+    padding: 20px 20px;
+  }
+}
 
-      @media (max-width: 480px) {
-        body {
-          padding: 0 8px;
-        }
-        #bigfont {
-          font-size: 1.8rem;
-        }
-        .section-title {
-          font-size: 1.5rem;
-          margin-top: 30px;
-          border-bottom-width: 1px;
-        }
+@media (max-width: 480px) {
+  body {
+    padding: 0 8px;
+  }
+  #bigfont {
+    font-size: 1.8rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    border-bottom-width: 1px;
+  }
 
-        .education-grid {
-          grid-template-columns: 1fr;
-          gap: 2px;
-          padding: 12px 14px;
-        }
-        .education-grid .grid-item {
-          padding: 4px 0;
-        }
-        .education-grid .item-year {
-          font-size: 0.9rem;
-        }
-        .education-grid .item-institution {
-          font-size: 0.85rem;
-          color: #666;
-        }
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 12px 14px;
+  }
+  .education-grid .grid-item {
+    padding: 4px 0;
+  }
+  .education-grid .item-year {
+    font-size: 0.9rem;
+  }
+  .education-grid .item-institution {
+    font-size: 0.85rem;
+    color: #666;
+  }
 
-        .grid-container {
-          gap: 12px;
-        }
-        .grid-item {
-          padding: 14px;
-        }
-        .work-grid .job-title {
-          font-size: 1rem;
-        }
-        .single-col-grid ul {
-          padding-left: 18px;
-          font-size: 0.95rem;
-        }
-        .contact-section {
-          padding: 16px 14px;
-        }
-        .contact-section i {
-          font-size: 1rem;
-          padding: 4px 14px;
-        }
-      }
+  .grid-container {
+    gap: 12px;
+  }
+  .grid-item {
+    padding: 14px;
+  }
+  .work-grid .job-title {
+    font-size: 1rem;
+  }
+  .single-col-grid ul {
+    padding-left: 18px;
+    font-size: 0.95rem;
+  }
+  .contact-section {
+    padding: 16px 14px;
+  }
+  .contact-section i {
+    font-size: 1rem;
+    padding: 4px 14px;
+  }
+}
 
-      /* Tablet-specific education layout: year in col 1, desc+institution in col 2 */
-      @media (max-width: 768px) and (min-width: 481px) {
-        .education-grid {
-          grid-template-columns: 1fr 2fr;
-          gap: 4px 15px;
-          padding: 14px 16px;
-        }
-        .education-grid .item-desc {
-          grid-column: 2 / 3;
-          grid-row: auto;
-        }
-        .education-grid .item-institution {
-          grid-column: 2 / 3;
-          grid-row: auto;
-          font-size: 0.9rem;
-          color: #666;
-        }
-        .education-grid .item-year {
-          grid-column: 1 / 2;
-          font-weight: 700;
-        }
-        .education-grid .grid-item {
-          padding: 4px 0;
-        }
-      }
+/* Tablet-specific education layout: year in col 1, desc+institution in col 2 */
+@media (max-width: 768px) and (min-width: 481px) {
+  .education-grid {
+    grid-template-columns: 1fr 2fr;
+    gap: 4px 15px;
+    padding: 14px 16px;
+  }
+  .education-grid .item-desc {
+    grid-column: 2 / 3;
+    grid-row: auto;
+  }
+  .education-grid .item-institution {
+    grid-column: 2 / 3;
+    grid-row: auto;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .education-grid .item-year {
+    grid-column: 1 / 2;
+    font-weight: 700;
+  }
+  .education-grid .grid-item {
+    padding: 4px 0;
+  }
+}
 
-      a {
-        word-break: break-word;
-      }
+a {
+  word-break: break-word;
+}
