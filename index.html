@@ -2,12 +2,20 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Behrooz Moniri's CV. Web Developer Mathematic Teacher, React, Node.js, Python, SQL, AWS, Docker. Building scalable web apps with clean code and collaborative problem-solving."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt"
       rel="stylesheet"
     />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="styles/bootstrap.min.css" />
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Behrooz Moniri CV</title>
@@ -232,7 +240,8 @@
       <h1>Contact</h1>
       <p><i>moniri@hotmail.co.uk</i></p>
       <p style="margin-top: 25px; font-weight: 500">
-        Example of Teaching A-level Mathematics
+        Example of Teaching A-level Mathematics<br />
+        Today's date: <span id="date-today"></span>
       </p>
       <div class="video-container">
         <iframe
@@ -246,10 +255,16 @@
   </body>
   <script defer>
     const now = new Date();
-    const month = now.toLocaleString("default", { month: "short" });
+
+    const month = now.toLocaleString("default", {
+      month: "short",
+      day: "2-digit",
+    });
     const year = now.getFullYear();
     const monthYear = `${month} ${year}`;
     document.getElementById("date-display").textContent = year;
-    //console.log(monthYear); // "Aug 2026"
+    document.getElementById("date-today").textContent = monthYear;
+
+    console.log(monthYear); // "Aug 2026"
   </script>
 </html>
